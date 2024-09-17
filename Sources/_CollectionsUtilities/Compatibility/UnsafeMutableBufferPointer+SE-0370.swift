@@ -244,7 +244,7 @@ extension Slice {
   ///    initialized by this function.
   @inlinable
   @_alwaysEmitIntoClient
-  public func initialize<C: Collection>(
+  public func initializeSlice<C: Collection>(
     fromContentsOf source: C
   ) -> Index where Base == UnsafeMutableBufferPointer<C.Element> {
     let buffer = Base(rebasing: self)

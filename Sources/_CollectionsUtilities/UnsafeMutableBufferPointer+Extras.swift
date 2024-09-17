@@ -99,7 +99,7 @@ extension Slice {
   public func initializeAll<C: Collection>(
     fromContentsOf source: C
   ) where Base == UnsafeMutableBufferPointer<C.Element> {
-    let i = self.initialize(fromContentsOf: source)
+    let i = self.initializeSlice(fromContentsOf: source)
     assert(i == self.endIndex)
   }
 
